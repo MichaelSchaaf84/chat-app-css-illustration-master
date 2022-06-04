@@ -1,0 +1,28 @@
+/*import google font*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/*colors*/
+
+/*(sub-heading at the top of the app UI)*/
+$pale_violet: hsl(276, 100%, 81%);
+/*(chat on the left)*/
+$moderate_violet: hsl(276, 55%, 52%);
+/*(chat on the right)*/
+$desaturated_dark_violet: hsl(271, 15%, 43%);
+/*(placeholder text)*/
+$grayish_blue: hsl(206, 6%, 79%);
+/*(main heading)*/
+$very_dark_desaturated_violet: hsl(271, 36%, 24%);
+/*paragraph*/
+$dark_grayish_violet: hsl(270, 7%, 64%);
+
+. {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
