@@ -30,38 +30,44 @@ $light_violet: hsl(264, 100%, 61%);
 }
 
 body {
-  min-height: 100%;
+  max-height: 100vh;
   background: lightblue;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   display: flex;
   align-items: center;
+  position: absolute;
 }
-.wrapper {
-}
+
 .bg {
+  position: relative;
+  z-index: -10;
   background: $moderate_violet;
-  height: 80vh;
+  height: 50vh;
   width: 30vw;
   border-bottom-left-radius: 240px;
   border-bottom-right-radius: 240px;
+  top: -100px;
+  right: 60px;
 }
 .card {
+  margin-left: -180px;
   font-size: 12px;
   max-width: 350px;
-  border: 5px solid white;
-  border-radius: 20px;
+  border: 10px solid white;
+  border-radius: 40px;
   background-color: $light_grayish_violet;
   .profile {
-    margin-top: -20px;
+    margin-top: -25px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient($light_magenta, $light_violet);
     padding: 0.75rem;
     padding-top: 2rem;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     color: white;
@@ -78,11 +84,33 @@ body {
       border: 1px solid white;
     }
   }
+  .wrapper-input {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0.5rem 0.7rem 0.5rem;
+
+    border-radius: 50px;
+    p {
+      color: $pale_violet;
+      margin-left: 2rem;
+    }
+  }
+  #msg-input {
+    padding: 0.5rem;
+    border: none;
+    margin-right: 0.5rem;
+  }
 }
 .name {
   margin-left: 15px;
   display: flex;
   flex-direction: column;
+  p {
+    color: $grayish_blue;
+    font-size: 12px;
+  }
 }
 .profile-left {
   display: flex;
@@ -94,12 +122,12 @@ body {
   position: relative;
   background-color: white;
   width: 50%;
-  height: 20px;
+  height: 25px;
   margin: 0 auto;
   z-index: 10;
   margin-bottom: -10px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 .wrapper-msg-right {
   display: flex;
@@ -114,24 +142,27 @@ body {
 .walker-msg {
   border-radius: 12px;
   border-bottom-left-radius: 5px;
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 0.2rem 0.5rem;
   padding: 0.5rem;
   max-width: 55%;
   background: $moderate_violet;
+  color: $very_dark_desaturated_violet;
 }
 .customer-msg {
   border-radius: 12px;
   border-bottom-right-radius: 5px;
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 0.2rem 0.5rem;
   padding: 0.5rem;
   max-width: 60%;
   background: $desaturated_dark_violet;
+  color: $very_dark_desaturated_violet;
 }
 .wrapper-imgs {
   margin-right: 0.5rem;
 }
 .dog {
   border-radius: 12px;
+  margin-top: 20px;
   margin-left: 0.5rem;
   width: 60px;
   height: auto;
@@ -139,8 +170,9 @@ body {
 .offer {
   max-width: 70%;
   background: linear-gradient($light_magenta, $light_violet);
+
   color: white;
-  padding: 1rem;
+  padding: 0.8rem;
   //display: flex;
   align-items: center;
   svg {
@@ -153,7 +185,29 @@ body {
 }
 
 .price {
+  align-items: center;
   display: flex;
-  font-weight: 500;
+  font-size: 12px;
   justify-content: space-between;
+  .dollar p {
+    font-weight: bold;
+    font-size: large;
+  }
+}
+.angebot {
+  display: flex;
+  align-items: center;
+}
+.shadow {
+  -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+}
+.submit {
+  color: $very_dark_desaturated_violet;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
