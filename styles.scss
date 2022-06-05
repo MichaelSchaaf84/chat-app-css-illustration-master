@@ -30,30 +30,22 @@ $light_violet: hsl(264, 100%, 61%);
 }
 
 body {
-  max-height: 100vh;
-  background: lightblue;
+  display: flex;
+  margin: 4rem;
+  min-height: 100vh;
+
+  background: rgb(239, 240, 241);
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   display: flex;
   align-items: center;
-  position: absolute;
 }
 
-.bg {
-  position: relative;
-  z-index: -10;
-  background: $moderate_violet;
-  height: 50vh;
-  width: 30vw;
-  border-bottom-left-radius: 240px;
-  border-bottom-right-radius: 240px;
-  top: -100px;
-  right: 60px;
-}
 .card {
-  margin-left: -180px;
-  font-size: 12px;
-  max-width: 350px;
+  // margin-left: -180px;
+
+  font-size: 10px;
+  max-width: 300px;
   border: 10px solid white;
   border-radius: 40px;
   background-color: $light_grayish_violet;
@@ -94,13 +86,8 @@ body {
     border-radius: 50px;
     p {
       color: $pale_violet;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
     }
-  }
-  #msg-input {
-    padding: 0.5rem;
-    border: none;
-    margin-right: 0.5rem;
   }
 }
 .name {
@@ -140,6 +127,7 @@ body {
   align-items: flex-start;
 }
 .walker-msg {
+  font-size: 8px;
   border-radius: 12px;
   border-bottom-left-radius: 5px;
   margin: 0.5rem 0.5rem 0.2rem 0.5rem;
@@ -149,6 +137,7 @@ body {
   color: $very_dark_desaturated_violet;
 }
 .customer-msg {
+  font-size: 8px;
   border-radius: 12px;
   border-bottom-right-radius: 5px;
   margin: 0.5rem 0.5rem 0.2rem 0.5rem;
@@ -164,34 +153,28 @@ body {
   border-radius: 12px;
   margin-top: 20px;
   margin-left: 0.5rem;
-  width: 60px;
+  width: 50px;
   height: auto;
 }
 .offer {
   max-width: 70%;
   background: linear-gradient($light_magenta, $light_violet);
-
   color: white;
   padding: 0.8rem;
-  //display: flex;
   align-items: center;
   svg {
     margin-right: 10px;
-  }
-  span {
-    font-weight: 500;
-    font-size: larger;
   }
 }
 
 .price {
   align-items: center;
   display: flex;
-  font-size: 12px;
+  font-size: 8px;
   justify-content: space-between;
   .dollar p {
     font-weight: bold;
-    font-size: large;
+    font-size: 10px;
   }
 }
 .angebot {
@@ -210,4 +193,27 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.description {
+  margin-top: 60px;
+
+  text-align: center;
+  //  max-width: 450px;
+  h1 {
+    margin-bottom: 15px;
+    font-size: 44px;
+    color: $very_dark_desaturated_violet;
+    font-weight: 500;
+  }
+  .text {
+    // padding: 1rem;
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: $dark_grayish_violet;
+    font-weight: 400;
+  }
 }
